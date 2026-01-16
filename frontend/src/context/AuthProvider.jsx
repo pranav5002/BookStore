@@ -7,7 +7,7 @@ export default function AuthProvider({ children }) {
     initialAuthUser ? JSON.parse(initialAuthUser) : undefined
   );
   return (
-    <AuthContext.Provider value={[authUser, setAuthUser]}>
+    <AuthContext.Provider value={{ authUser, setAuthUser }}>
       {children}
     </AuthContext.Provider>
   );
